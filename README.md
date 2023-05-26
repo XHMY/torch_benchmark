@@ -60,6 +60,50 @@ float 16 time: 0.09117490291595459
 float 32 time: 0.1799030590057373
 ````
 
+
+### GeForce RTX™ 4090 GAMING OC (Ubuntu 22.04.2 LTS)
+
+```
+*** Matrix multiplication test ***	
+Pytorch version	: 2.1.0a0+fe05266
+CUDA version	: 12.1
+GPU		: NVIDIA GeForce RTX 4090
+Platform	: Linux-5.19.0-42-generic-x86_64-with-glibc2.29
+               n=128   n=512   n=2048   n=8192  n=16384
+torch.float64  0.139   1.192    1.208    1.209    1.205
+torch.float32  1.017  28.959   82.870   86.069   86.406
+torch.float16  0.991  46.028  163.917  167.680  171.077
+        65536    262144    1048576   4194304
+TFLOPS    0.020    0.081     0.318     0.474
+GB/s    163.038  648.931  2545.951  3791.159
+*** PyTorch Vision Models Training Test ***	
+Pytorch version	: 2.1.0a0+fe05266
+CUDA version	: 12.1
+GPU		: NVIDIA GeForce RTX 4090
+Platform	: Linux-5.19.0-42-generic-x86_64-with-glibc2.29
+       model_name  float16  img_size  batch_size  images per second
+11  convnext_base    False       224          64         206.842381
+5     densenet201    False       224          64         385.002822
+3        resnet50    False       224          64         697.398160
+9       swin_v2_b    False       224          64         186.133231
+1           vgg13    False       224          64         467.028589
+7        vit_b_16    False       224          64         350.083329
+10  convnext_base     True       224          64         567.728980
+4     densenet201     True       224          64         632.903872
+2        resnet50     True       224          64        1296.704699
+8       swin_v2_b     True       224          64         379.712459
+0           vgg13     True       224          64         778.508125
+6        vit_b_16     True       224          64         766.554800
+*** PyTorch 3D Convolutional Network Benchmark ***	
+Pytorch version	: 2.1.0a0+fe05266
+CUDA version	: 12.1
+GPU		: NVIDIA GeForce RTX 4090
+Platform	: Linux-5.19.0-42-generic-x86_64-with-glibc2.29
+float 16 time: 0.08919850826263427 
+float 32 time: 0.17720082759857178
+
+```
+
 ### NVIDIA TITAN RTX (Ubuntu 22.04.2 LTS)
 
 ```
