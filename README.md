@@ -62,6 +62,7 @@ float 32 time: 0.1799030590057373
 
 ### NVIDIA TITAN RTX (Ubuntu 22.04.2 LTS)
 
+```
 *** Matrix multiplication test ***
 Pytorch version : 2.1.0a0+fe05266
 CUDA version    : 12.1
@@ -99,4 +100,4 @@ GPU             : NVIDIA TITAN RTX
 Platform        : Linux-5.19.0-42-generic-x86_64-with-glibc2.29
 float 16 time: 0.17795355319976808
 float 32 time: 0.6057921314239502
-
+```
