@@ -17,7 +17,7 @@ bash run.sh
 ```
 
 ## Reference Result
-### RTX 4090 WSL
+### GeForce RTX™ 4090 GAMING OC (WSL)
 
 ```
 *** Matrix multiplication test ***	
