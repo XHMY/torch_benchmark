@@ -145,3 +145,38 @@ Platform        : Linux-5.19.0-42-generic-x86_64-with-glibc2.29
 float 16 time: 0.17795355319976808
 float 32 time: 0.6057921314239502
 ```
+
+### NVIDIA H100 80GB HBM3
+
+```
+*** Matrix multiplication test ***
+Pytorch version : 2.1.1
+CUDA version    : 12.1
+GPU             : NVIDIA H100 80GB HBM3
+Platform        : Linux-5.14.0-162.23.1.el9_1.x86_64-x86_64-with-glibc2.34
+               n=128   n=512   n=2048   n=8192  n=16384
+torch.float64  0.530  29.986   52.492   46.701   48.948
+torch.float32  0.536  17.703   51.137   51.514   53.009
+torch.float16  0.520  33.500  401.502  626.037  658.557
+        65536    262144    1048576   4194304
+TFLOPS    0.014    0.056     0.225     0.468
+GB/s    112.115  447.139  1800.379  3743.574
+*** PyTorch Vision Models Training Test ***
+Pytorch version : 2.1.1
+CUDA version    : 12.1
+GPU             : NVIDIA H100 80GB HBM3
+Platform        : Linux-5.14.0-162.23.1.el9_1.x86_64-x86_64-with-glibc2.34
+       model_name  float16  img_size  batch_size  images per second
+11  convnext_base    False       224          64         232.561327
+5     densenet201    False       224          64         557.317382
+3        resnet50    False       224          64        1380.650486
+9       swin_v2_b    False       224          64         243.054995
+1           vgg13    False       224          64        1070.426841
+7        vit_b_16    False       224          64         353.716016
+10  convnext_base     True       224          64         834.098826
+4     densenet201     True       224          64         626.646100
+2        resnet50     True       224          64        1674.054897
+8       swin_v2_b     True       224          64         534.375826
+0           vgg13     True       224          64        1459.862171
+6        vit_b_16     True       224          64        1592.188819
+```
