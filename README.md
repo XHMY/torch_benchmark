@@ -180,3 +180,36 @@ Platform        : Linux-5.14.0-162.23.1.el9_1.x86_64-x86_64-with-glibc2.34
 0           vgg13     True       224          64        1459.862171
 6        vit_b_16     True       224          64        1592.188819
 ```
+
+### NVIDIA H200 141GB
+
+```
+Pytorch version : 2.5.1                                                                                                                                  
+CUDA version    : 12.4                                                                                                                                   
+GPU             : NVIDIA H200 MIG 7g.141gb                                                                                                               
+Platform        : Linux-5.14.0-427.42.1.el9_4.x86_64-x86_64-with-glibc2.34
+
+*** Matrix multiplication test ***
+               n=128   n=512   n=2048   n=8192  n=16384                                                                                                  
+torch.float64  0.214  25.517   53.091   47.667   49.345                                                                                                  
+torch.float32  0.218  17.423   50.257   51.505   53.539                                                                                                  
+torch.float16  0.219  25.778  399.811  650.830  663.996                                                                                                  
+        65536    262144    1048576   4194304                                                                                                             
+TFLOPS    0.013    0.050     0.197     0.559                                                                                                             
+GB/s    101.300  398.265  1577.591  4469.536
+
+*** PyTorch Vision Models Training Test ***
+       model_name  float16  img_size  batch_size  images per second
+11  convnext_base    False       224          64         253.450538
+5     densenet201    False       224          64         657.076050
+3        resnet50    False       224          64        1498.406707
+9       swin_v2_b    False       224          64         259.752509
+1           vgg13    False       224          64        1264.374322
+7        vit_b_16    False       224          64         363.216864
+10  convnext_base     True       224          64         917.461097
+4     densenet201     True       224          64         709.649110
+2        resnet50     True       224          64        1812.262740
+8       swin_v2_b     True       224          64         582.280866
+0           vgg13     True       224          64         875.882406
+6        vit_b_16     True       224          64        1922.492505
+```
